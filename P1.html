@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos de barbacoa + antojitos mexicanos "EL PROFE"</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Utilizamos una fuente moderna */
+            background-color: #f8f8f8; /* Fondo blanco grisáceo */
+            color: #333; /* Texto principal */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffbb33; /* Naranja */
+            padding: 20px;
+            text-align: center;
+            color: #fff; /* Texto blanco */
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ffcc80; /* Naranja claro */
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #ffb74d; /* Naranja más oscuro al pasar el mouse */
+        }
+        section#about {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff; /* Fondo blanco */
+        }
+        section#about h2 {
+            color: #ffbb33; /* Naranja */
+            margin-bottom: 20px;
+        }
+        section#about p {
+            color: #666; /* Texto gris */
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        section#about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        section#menu {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f8f8f8; /* Fondo blanco grisáceo */
+        }
+        section#menu h2 {
+            color: #ffbb33; /* Naranja */
+            margin-bottom: 20px;
+        }
+        section#menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        section#menu ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            background-color: #fff; /* Fondo blanco */
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: transform 0.3s;
+        }
+        section#menu ul li:hover {
+            transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+        }
+        footer {
+            background-color: #333; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>¡Bienvenidos a <br>Tacos de barbacoa + antojitos mexicanos "EL PROFE"!</h1>
+            <p>Descubre la auténtica comida mexicana de los auténticos Tacos de barbacoa + antojitos mexicanos "EL PROFE"</p>
+            <a href="#menu" class="btn">Explora nuestro menú</a>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const numeroWhatsApp = "3414121875"; 
+                    const mensaje = "¡Hola, buen día! Quiero hacer un pedido";
+
+                    const mensajeCodificado = encodeURIComponent(mensaje);
+
+                    const enlaceWhatsApp = document.createElement("a");
+                    enlaceWhatsApp.href = "https://api.whatsapp.com/send?phone=" + numeroWhatsApp + "&text=" + mensajeCodificado;
+                    enlaceWhatsApp.target = "_blank";
+                    enlaceWhatsApp.textContent = "Hacer un pedido por WhatsApp";
+                    enlaceWhatsApp.classList.add("btn");
+
+                    const btnExplorarMenu = document.querySelector('.btn');
+                    btnExplorarMenu.parentNode.insertBefore(enlaceWhatsApp, btnExplorarMenu.nextSibling);
+                });
+            </script>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <h2>Descubre una experiencia única</h2>
+            <p>Somos un negocio caracterizado por la calidad, sabor y variedad de nuestros alimentos. Nuestros platillos están inspirados en la tradición mexicana pero con un toque fresco y natural que te sorprenderá.</p>
+            <img src="https://img.restaurantguru.com/ccae-Restaurant-Tacos-de-barbacoa-and-antojitos-mexicanos-dishes.jpg" alt="Restaurante XYZ - Comida Mexicana">
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Nuestro Menú</h2>
+            <ul>
+                <li><h3>Tacos de Barbacoa</h3></li>
+                <li><h3>Enchiladas Suizas</h3></li>
+                <li><h3>Enchiladas rojas</h3></li>
+               <li><h3>Flautas</h3></li>
+                <li><h3>Tortas</h3></li>
+                <li><h3>Gorditas rellenas </h3></li>
+                <li><h3>Sopitos</h3></li>
+                <li><h3>Omellet</h3></li>
+                <li><h3>Burritos</h3></li>
+                <li><h3>Huevos al gusto</h3></li>
+                <li><h3>Hotcake</h3></li>
+                <li><h3>Barbiqueso</h3></li>
+                <li><h3>Sincronizada</h3></li>
+                <li><h3>Molletes</h3></li>
+                <li><h3>Bebidas</h3></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tacos de Barbacoa + Antojitos Mexicanos "EL PROFE" Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
